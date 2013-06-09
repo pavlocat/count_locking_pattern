@@ -64,13 +64,9 @@ class CountLockingPattern
   end
 end
 
-def main
-  clp = CountLockingPattern.new
-  if ARGV.size == 0
-    clp.count_dots_all_patterns()
-  else
-    clp.count_dots_n_patterns(ARGV[0].to_i)
-  end
+clp = CountLockingPattern.new
+if ARGV.size == 0
+  clp.count_dots_all_patterns()
+else
+  clp.count_dots_n_patterns(ARGV[0].to_i)
 end
-
-main
